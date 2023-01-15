@@ -1,0 +1,235 @@
+@keyframes buy {
+    0% {
+        transform: rotate(0);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.top_bsk {
+    background-image: url(img/basket/basket_bg.png);
+    height: 400px;
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: cover;
+    color: $color-text;
+}
+
+.bsk_title {
+    @extend .ct_title
+}
+
+.cart {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: $gap;
+    margin-top: 64px;
+
+
+    &__content {
+        grid-column: span 8;
+
+    }
+
+    &__name-box {
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 14px;
+    }
+
+    &__item {
+        border-top: 0.5px solid #cacdd8;
+        padding-top: 25px;
+        padding-bottom: $gap;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
+    &__info {
+        width: 276px;
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+    }
+
+    &__left {
+        display: flex;
+        gap: $gap;
+    }
+
+    &__left_title {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 29px;
+        color: #000000;
+    }
+
+    &__left_subtitle {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 17px;
+        color: #888888;
+    }
+
+    &__left_price {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 20px;
+        color: #050505;
+    }
+
+    &_link {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 210%;
+        color: #000;
+        padding-right: 30px;
+    }
+
+    &__left_input {
+        background: #F7F6F6;
+        border: none;
+        border-radius: 6px;
+        width: 71px;
+        height: 51px;
+        text-align: center;
+    }
+
+    &__form_input {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 17px;
+        border: none;
+        background: none;
+        border-bottom: 1px solid #CACDD8;
+    }
+
+    &__form_input::placeholder {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 17px;
+        color: #000;
+    }
+
+
+    &__form_button {
+        border: 1px solid #040404;
+        border-radius: 20px;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 20px;
+        color: #000000;
+        background-color: transparent;
+        width: 290px;
+        height: 41px;
+        padding: 10px 63px 11px 90px;
+        margin: 18px;
+
+
+    }
+
+    &__form_button:hover {
+        animation: buy 1s ease 0s 1 normal forwards;
+    }
+
+    &__button {
+        border: 1px solid #000000;
+        border-radius: 50px;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 17px;
+        color: #020202;
+        background-color: transparent;
+        width: 200px;
+        height: 37px;
+        transition: all 1s;
+    }
+
+    &__button:hover {
+        color: #fff;
+        background-color: #000;
+
+    }
+
+    &__button_one {
+        padding: 10px 34px;
+        margin-right: 7px;
+    }
+
+    &__button_two {
+        padding: 10px 21px;
+    }
+}
+
+.form_input-box {
+    display: flex;
+    flex-direction: column;
+    width: 288px;
+    gap: 41px;
+    padding-top: 35px;
+    padding-bottom: 64px;
+    padding-left: 24px;
+}
+
+.total {
+    font-weight: 500;
+}
+
+.button_box {
+    margin-top: 18px;
+}
+
+.ct_bsk_link {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    color: #000;
+    margin-top: 32px;
+    transition: all 1s;
+}
+
+.ct_bsk_link:hover {
+    color: #888;
+    text-decoration: none;
+}
+
+.cart__form_total {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 29px;
+}
+
+.cart__form {
+    background-color: #F7F6F6;
+    border-radius: 20px;
+    height: 556px;
+    grid-column: span 4;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 36px;
+    padding-top: 42px;
+    align-items: center;
+    text-align: center;
+
+}
+
+.link-cart__title {
+    text-decoration: none;
+    color: #000;
+}
+
+@import 'tablet';
+@import 'mobile';
